@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block Scope</title>
+    <script>
+        var hero = {
+            title : "Ironman",
+            power : 7
+        };
+
+        function checkPower(){
+            if(hero.power > 5){
+                let temp = hero.title+" is strong";
+                hero.title = temp;
+                console.log(temp);
+            }
+        };
+        checkPower();
+        console.log(hero.title);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

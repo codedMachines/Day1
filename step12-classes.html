@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class</title>
+    <script>
+        // function Hero(fname, lname){
+        //     this.firstname = fname;
+        //     this.lastname = lname;
+        // };
+        // Hero.prototype.fullname = function(){
+        //     return this.firstname+" "+this.lastname;
+        // };
+
+        // var hero1 = new Hero("Tony", "Stark");
+        // var hero2 = new Hero("Steve", "Rogers");
+        
+        // console.log(hero1.fullname());// tony stark
+        // console.log(hero2.fullname());// steve rogers
+        // console.log( hero1.fullname === hero2.fullname );// steve rogers
+
+        class Person{
+            constructor(cty){
+                this.city = cty
+            }
+        };
+        class Hero extends Person{
+            constructor(fname,lname, cty){
+                super(cty)
+                this.firstname = fname;
+                this.lastname = lname;
+                this._mission = "Default Mission";
+            }
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            get mission(){
+                return this._mission;
+            }
+            set mission(nmission){
+                this._mission = nmission;
+            }
+        };
+
+        var hero1 = new Hero("Tony", "Stark", "New York");
+        var hero2 = new Hero("Steve", "Rogers", "New York");
+
+        console.log(hero1.fullname());// tony stark
+        console.log(hero2.fullname());// steve rogers
+        console.log(hero1.city);// New York
+        console.log(hero1.mission);// Default Mission
+        hero1.mission = "secret mission";
+        console.log(hero1.mission);// secret mission
+        console.log( hero1.fullname === hero2.fullname );// steve rogers
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

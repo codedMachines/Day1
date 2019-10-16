@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest Parameters</title>
+    <script>
+
+    //    function adder(){
+    //        let temp = 0;
+    //        for(let i = 0; i < arguments.length; i++){
+    //         temp += arguments[i]
+    //        }
+    //         return temp;
+    //    };
+    //    console.log( adder(5) ); // NaN
+    //    console.log( adder(5,6) ); // 11
+    //    console.log( adder(5,6,7) ); // 11
+    //    console.log( adder(5,6,7,8) ); // 11
+      
+      function adder(...nums){
+           let temp = 0;
+           for(let i = 0; i < nums.length; i++){
+            temp += nums[i]
+           }
+            return temp;
+       };
+      //  console.log( adder(5) ); // NaN
+      //  console.log( adder(5,6) ); // 11
+      //  console.log( adder(5,6,7) ); // 18
+      var arr = [5,6,7,8];
+      console.log( adder(arr[0], arr[1], arr[2], arr[3]) ); // 
+      console.log( adder(...arr) ); // 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+Install the following extensions
+    Mithril Emmet
+    open in browser
+    Beautify
+    ES7 React/Redux/GraphQL/React-Native snippets
+
+NodeJS
+npm install express
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+    <script>
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 200
+        //     },
+        //     getSellingPrice : function(){
+        //        var calculateProfit = function(that){
+        //            return that.getCostPrice() * 0.1
+        //        }
+        //        return calculateProfit(this) + this.getCostPrice();
+        //     }
+        // };
+
+        // console.log(cart.getSellingPrice());// 220 
+
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 200
+        //     },
+        //     getSellingPrice : function(){
+        //        var self = this;
+        //        var calculateProfit = function(that){
+        //            return self.getCostPrice() * 0.1
+        //        }
+        //        return calculateProfit() + this.getCostPrice();
+        //     }
+        // };
+
+        // console.log(cart.getSellingPrice());// 220 
+
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 200
+        //     },
+        //     getSellingPrice : function(){
+        //        var calculateProfit = function(){
+        //            return this.getCostPrice() * 0.1
+        //        }
+        //        // return calculateProfit.call(this) + this.getCostPrice();
+        //        // return calculateProfit.apply(this) + this.getCostPrice();
+        //        return calculateProfit.bind(this)() + this.getCostPrice();
+        //     }
+        // };
+
+        // console.log(cart.getSellingPrice());// 220 
+
+        var cart = {
+            getCostPrice : function(){
+                return 200
+            },
+            getSellingPrice : function(){
+               var calculateProfit = () => {
+                   return this.getCostPrice() * 0.1
+               }
+               // return calculateProfit.call(this) + this.getCostPrice();
+               // return calculateProfit.apply(this) + this.getCostPrice();
+               //return calculateProfit.bind(this)() + this.getCostPrice();
+               return calculateProfit() + this.getCostPrice();
+            }
+        };
+
+        console.log(cart.getSellingPrice());// 220 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call Apply Bind</title>
+    <script>
+        var ironman = {
+            firstname : "Tony",
+            lastname : "Stark",
+            fullname : function(message){
+                return this.firstname+" "+this.lastname+" says "+message;
+            }
+        };
+        var spiderman = {
+            firstname : "Peter",
+            lastname : "Parker" };
+        var antman = {
+            firstname : "Scott",
+            lastname : "Lang" };
+        console.log(ironman.fullname("i love burger"));// Tony Stark
+        console.log("CALL++++++++++++++++++++++++++++++++++++++")
+        console.log(ironman.fullname.call(spiderman, "with great powers comes great responsibilities"));// Peter Parker
+        console.log("APPLY+++++++++++++++++++++++++++++++++++++")
+        console.log(ironman.fullname.apply(spiderman,["with great powers comes great responsibilities"]));// Peter Parker
+        console.log("BIND++++++++++++++++++++++++++++++++++++++")
+        console.log(ironman.fullname.bind(spiderman)("with great powers comes great responsibilities"));// Peter Parker
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

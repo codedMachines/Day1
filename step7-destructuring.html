@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        var hero = {
+            title : "Ironman",
+            power : 7
+        };
+        
+        var temp = hero;
+        
+        console.log(hero.title, temp.title);// Ironman, Ironman;
+        
+        temp.title = "Joker";
+        
+        console.log(hero.title, temp.title);// Ironman, Joker;
+        */
+            var hero = function(){
+                return {
+                        title : "Ironman",
+                        power : 7
+                    }
+            };
+            
+            // var tempTitle = hero.title;
+            // var tempPower = hero.power;
+
+            // var tempTitle = hero.title, 
+            //     tempPower = hero.power;
+
+            // var {title : tempTitle, power : tempPower } = hero();
+            
+            // console.log(tempTitle );// Ironman, Ironman;
+            
+            // tempTitle = "Joker";
+            
+            // console.log(tempTitle);// Ironman, Joker;
+
+            var { title, power } = hero();
+            
+            console.log(title );// Ironman, Ironman;
+            
+            title = "Joker";
+            
+            console.log( title );// Ironman, Joker;
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
